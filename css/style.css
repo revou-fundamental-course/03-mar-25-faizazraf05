@@ -8,7 +8,7 @@
 .main-logo {
     height: 50px;
     width: 50px;
-    background-image: url(https://picsum.photos/id/237/200/300);
+    background-image: url(../assets/20250308_125207.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 50%;
@@ -53,4 +53,8 @@ nav > a {
 
 footer {
     text-align: center;
+}
+
+hr {
+    border-width: 2px
 }
