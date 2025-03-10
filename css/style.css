@@ -1,10 +1,22 @@
 /* ini file css */
 
+hr {
+    width: auto; /* Lebar penuh dari kiri ke kanan */
+    border: none; /* Hilangkan border default */
+    height: 2px; /* Ketebalan garis */
+    background-color: black; /* Warna garis */
+    margin: 15px 0; /* Jarak atas dan bawah */
+}
+
+
 .main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px;
 }
+
+/* LOGO */
 .main-logo {
     height: 50px;
     width: 50px;
@@ -14,6 +26,7 @@
     border-radius: 50%;
 }
 
+/* Tombol Navigasi */
 nav {
     display: flex;
 }
@@ -25,23 +38,77 @@ nav > a {
     color: black;
 }
 
+.home{
+    padding: 10px;
+}
+
+/* Auto slide */
 .banner-img {
     border: 1px solid;
     height: 500px;
 }
 
-.our-profile-content {
+.our-profile {
+    padding: 10px;
+}
+
+.our-profile-content,  {
+    padding: 10px;
+}
+
+/* Tata letak Our Profile */
+.grid-3 {
+    border: 1px solid;
+    height: auto;
+    align-content: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+/* Mengatur tatanan sub di our profile */
+.sub {
+    padding: 1rem;
+    text-align: center;
+    background-color: rgb(244, 244, 244);
+    border-radius: 20%;
+}
+
+/* Mengatur teks h4 */
+.sub h4 {
+    margin: 1.5rem 0;
+    font-weight: 1000;
+    font-size: 1.05rem;
+}
+
+/* Mengatur warna latar disetiap icon pada sub our profile */
+.sub-icon {
+    background-color: rgb(255, 251, 203);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 1.3rem;
+    border-radius: 0.5rem;
+}
+
+/* Mengatur warna gambar disetiap icon pada sub our profile */
+.sub-icon svg {
+    fill: rgb(86, 78, 9);
+}
+
+.achievment {
+    padding: 10px;
+
+}
+.achievment-content {
     border: 1px solid;
     height: 500px;
     align-content: center;
     text-align: center;
 }
 
-.achievment-content {
-    border: 1px solid;
-    height: 500px;
-    align-content: center;
-    text-align: center;
+.message-us {
+    padding: 10px;
 }
 
 .message-us-content {
@@ -53,6 +120,7 @@ nav > a {
 
 footer {
     text-align: center;
+    padding: 10px;
 }
 
 hr {
