@@ -5,7 +5,7 @@ hr {
     border: none; /* Hilangkan border default */
     height: 2px; /* Ketebalan garis */
     background-color: black; /* Warna garis */
-    margin: 15px 0; /* Jarak atas dan bawah */
+    margin: 1px 0; /* Jarak atas dan bawah */
 }
 
 
@@ -38,6 +38,10 @@ nav > a {
     color: black;
 }
 
+.home-content {
+    background-color: #f8f8f8;
+}
+
 .home{
     padding: 10px;
 }
@@ -58,7 +62,6 @@ nav > a {
 
 /* Tata letak Our Profile */
 .grid-3 {
-    border: 1px solid;
     height: auto;
     align-content: center;
     text-align: center;
@@ -69,10 +72,11 @@ nav > a {
 
 /* Mengatur tatanan sub di our profile */
 .sub {
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
     background-color: rgb(244, 244, 244);
     border-radius: 20%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Mengatur teks h4 */
@@ -98,8 +102,10 @@ nav > a {
 
 .achievment {
     padding: 10px;
-
+    background-color: #f8f8f8;
 }
+
+
 .achievment-content {
     height: auto;
     align-content: center;
@@ -111,6 +117,7 @@ nav > a {
 }
 
 .achievement-text {
+    
     flex: 1;
 }
 
@@ -118,7 +125,7 @@ nav > a {
     display: flex; /* Menggunakan flexbox agar gambar dan teks sejajar */
     align-items: center; /* Pusatkan vertikal */
     background: white; /* Latar belakang putih untuk card */
-    padding: 20px; /* Tambahkan padding di dalam card */
+    padding: 2rem; /* Tambahkan padding di dalam card */
     border-radius: 10px; /* Membuat sudut card membulat */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan untuk card */
     text-align: left; /* Teks rata kiri */
@@ -127,7 +134,7 @@ nav > a {
 
 /* Gaya untuk gambar */
 .achievement-card img {
-    width: 20%; /* Gambar mengisi seluruh lebar card */
+    width: auto; /* Gambar mengisi seluruh lebar card */
     height: 150px; /* Atur tinggi gambar agar seragam */
     object-fit: cover; /* Potong gambar agar tidak terdistorsi */
     border-radius: 10px; /* Membuat sudut gambar membulat */
@@ -142,6 +149,10 @@ nav > a {
 
 /* Gaya untuk deskripsi prestasi */
 .achievement-card p {
+    width: auto;
+    display: flex;
+    flex-direction: column; /* Menata teks dalam satu kolom */
+    justify-content: center; /* Menjaga posisi sejajar */
     font-size: 14px; /* Ukuran font lebih kecil */
     color: gray; /* Warna teks abu-abu */
     margin: 15px 0 2px;
@@ -155,7 +166,7 @@ nav > a {
     max-width: 500px;
     overflow-wrap: break-word;
     white-space: normal;
-    margin-left: 100px;
+    margin-left: auto;
 }
 
 .message-us {
