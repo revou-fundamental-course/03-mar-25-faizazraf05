@@ -17,7 +17,7 @@
 </head>
 <body>
     <!-- Main header -->
-    <header class="main-header" style="margin-top: 20px;margin-bottom: 20px;">
+    <header class="main-header" style="margin-bottom: 20px;">
         <!-- Logo -->
         <div class="main-logo"></div>
 
@@ -45,7 +45,32 @@
                     </header>
                     
                     <!-- Banner autoslide -->
-                     <div class="banner-img"></div>  
+                    <div class="slider-container">
+                        <div class="slides">
+                            <img src="assets\Logo KRI 2024.png" class="slide" alt="Slide 1">
+                            <img src="assets\LogoTC.webp" class="slide" alt="Slide 2">
+                            <img src="https://via.placeholder.com/800x400?text=Slide+3" class="slide" alt="Slide 3">
+                        </div>
+                        
+                        <div class="nav-buttons">
+                            <div class="left">
+                                <button class="nav-btn prev">❮</button>
+                            </div>
+                            <div class="right">
+                                <button class="nav-btn next">❯</button>
+                            </div>
+                            
+                        </div>
+                
+                        <div class="dots">
+                            <span class="dot" data-slide="0"></span>
+                            <span class="dot" data-slide="1"></span>
+                            <span class="dot" data-slide="2"></span>
+                        </div>
+                    </div>
+                     <script src="script.js"></script>
+
+
                 </div>
             </section>
          </div>
@@ -114,6 +139,7 @@
                     </div>
                     <h3>Peserta Kontes Robot Indonesia</h3>
                     <p>Tingkat Provinsi - 2024</p>
+                    <div class="achievment-btn" onclick="viewCertificate('assets\Sertifikat ABU KRAI Faiz.pdf')">Certificate</div>
                     <div class="achievment-desk">Pada perlombaan ABU KRAI 2024 dengan mewakilkan Universitas Sebelas Maret, saya adalah salah satu dari tim divisi mekanis, saya dan tim dapat membuat desain dan kerangka untuk dua robot pada perlombaan ABU KRAI 2024 tersebut.</div>
                 </div>
         
@@ -140,9 +166,36 @@
                 </header>
     
                 <!-- Konten Message Us -->
-                <div class="message-us-content">
-                    <p>Haiii guys</p>
+                <div class="container">
+                    <div class="form-section">
+                        <form id="messageForm">
+                            <label for="name">Nama</label>
+                            <input type="text" id="name" name="name" required>
+            
+                            <label for="dob">Tanggal Lahir</label>
+                            <input type="date" id="dob" name="dob" required>
+            
+                            <label>Jenis Kelamin</label>
+                            <input type="radio" id="male" name="gender" value="Laki-Laki" required>
+                            <label for="male">Laki-Laki</label>
+                            <input type="radio" id="female" name="gender" value="Perempuan">
+                            <label for="female">Perempuan</label>
+            
+                            <label for="message">Pesan</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+            
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                    <div class="display-section" id="displaySection">
+                        <h3>Current time: <span id="currentTime"></span></h3>
+                        <p><strong>Nama:</strong> <span id="displayName"></span></p>
+                        <p><strong>Tanggal Lahir:</strong> <span id="displayDob"></span></p>
+                        <p><strong>Jenis Kelamin:</strong> <span id="displayGender"></span></p>
+                        <p><strong>Pesan:</strong> <span id="displayMessage"></span></p>
+                    </div>
                 </div>
+                <script src="script.js"></script>
              </section>
          </div>
          
