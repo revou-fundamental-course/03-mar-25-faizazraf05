@@ -8,12 +8,17 @@ hr {
     margin: 1px 0; /* Jarak atas dan bawah */
 }
 
+body {
+    margin: 0;
+}
 
 .main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     padding: 10px;
+    background: linear-gradient(90deg, #B19CD9, #A3BFFA);
 }
 
 /* LOGO */
@@ -29,13 +34,26 @@ hr {
 /* Tombol Navigasi */
 nav {
     display: flex;
+    gap: 10px;
 }
 
-nav > a {
-    padding: 8px;
-    border: 1px solid;
+.nav-desain {
     text-decoration: none;
-    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 25px; /* Membuat tombol berbentuk kapsul */
+    background-color: #f8f8f8; /* Latar belakang tombol */
+    transition: all 0.3s ease; /* Transisi halus untuk semua perubahan */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+}
+
+.nav-desain:hover {
+    background-color: #8b5fec; /* Warna latar saat hover */
+    color: #1b1515; /* Warna teks saat hover */
+    transform: translateY(-2px); /* Efek sedikit naik saat hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan lebih dalam saat hover */
 }
 
 .home-content {
@@ -43,7 +61,7 @@ nav > a {
 }
 
 .home{
-    padding: 10px;
+    padding: 50px;
 }
 
 /* Auto slide */
@@ -89,6 +107,7 @@ nav > a {
     padding: 10px 20px;
     cursor: pointer;
     font-size: 18px;
+    border-radius: 20%;
 }
 
 .nav-btn:hover {
@@ -114,8 +133,9 @@ nav > a {
     background-color: #717171;
 }
 
+/* OUR PROFILE */
 .our-profile {
-    padding: 10px;
+    padding: 50px;
 }
 
 .our-profile-content  {
@@ -132,6 +152,13 @@ nav > a {
     gap: 3rem;
 }
 
+.sub:hover {
+    background-color: #a974c5; /* Warna latar saat hover */
+    color: #1b1515; /* Warna teks saat hover */
+    transform: translateY(-2px); /* Efek sedikit naik saat hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 /* Mengatur tatanan sub di our profile */
 .sub {
     padding: 2rem;
@@ -139,6 +166,7 @@ nav > a {
     background-color: rgb(244, 244, 244);
     border-radius: 20%;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddadf0;
 }
 
 /* Mengatur teks h4 */
@@ -162,8 +190,9 @@ nav > a {
     fill: rgb(86, 78, 9);
 }
 
+/* ACHIEVMENT */
 .achievment {
-    padding: 10px;
+    padding: 50px;
     background-color: #f8f8f8;
 }
 
@@ -177,10 +206,6 @@ nav > a {
     margin: 10px 0;
     border-radius: 10%;
     transition: 0.3s;
-}
-
-.certificate-btn:hover {
-    background-color: rgb(85, 1, 85);;
 }
 
 .achievment-content {
@@ -207,6 +232,14 @@ nav > a {
     text-align: left; /* Teks rata kiri */
     gap: 20px; /* Beri jarak antara gambar dan teks */
 }
+
+.achievement-card:hover {
+    background-color: #ececec; /* Warna latar saat hover */
+    color: #1b1515; /* Warna teks saat hover */
+    transform: translateY(-2px); /* Efek sedikit naik saat hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}   
+
 
 /* Gaya untuk gambar */
 .achievement-card img {
@@ -245,8 +278,10 @@ nav > a {
     margin-left: auto;
 }
 
+
+/* MESSAGE US */
 .message-us {
-    padding: 10px;
+    padding: 50px;
 }
 
 .message-us-content {
@@ -256,68 +291,149 @@ nav > a {
     text-align: center;
 }
 
-body {
-    font-family: Arial, sans-serif;
+.message-container body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
     padding: 20px;
-    background-color: #f4f4f4;
 }
 
-.container {
+.message-container {
     display: flex;
-    justify-content: space-between;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.form-section, .display-section {
-    width: 45%;
-    padding: 20px;
     background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 100%;
+    gap: 30px;
+    top: 50%;
+    justify-content: space-between;
 }
 
-.form-section h2 {
-    margin-top: 0;
+.form-section, .preview-section {
+    padding: 20px;
+    width: 50%;
+}
+
+.form-section {
+    padding: 20px 40px 20px 20px;
+    border-right: 1px solid #e0e0e0;
+}
+
+.preview-section {
+    padding: 20px 20px 20px 0; /* Padding kiri lebih besar */
+}
+
+.message-container h2 {
+    font-size: 22px;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.message-container h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.form-group {
+    margin-bottom: 15px;
 }
 
 label {
     display: block;
-    margin: 10px 0 5px;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    font-weight: 500;
 }
 
 input[type="text"], input[type="date"], textarea {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
+    padding: 10px;
+    border: 1px solid #bf9aff;
     border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="date"]:focus, textarea:focus {
+    border-color: #0033ff;
+    outline: none;
+}
+
+textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
 
 input[type="radio"] {
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
-button {
+label[for="male"], label[for="female"] {
+    margin: 0;
+    font-weight: 400;
+}
+
+.submit-btn {
     width: 100%;
     padding: 10px;
-    background-color: #ccc;
+    background-color: #aa63c7;
     border: none;
     border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-button:hover {
-    background-color: #bbb;
+.submit-btn:hover {
+    background-color: #734c82;
+    transform: translateY(-2px);
 }
 
-.display-section h3 {
-    margin-top: 0;
+.preview-section p {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 10px;
+    line-height: 1.5;
 }
 
-.display-section p {
-    margin: 5px 0;
+.preview-section strong {
+    color: #222;
+}
+
+@media (max-width: 600px) {
+    .message-container {
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .form-section, .preview-section {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .preview-section {
+        border-bottom: none;
+    }
 }
 
 /* Footer */

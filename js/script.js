@@ -75,7 +75,7 @@ sliderContainer.addEventListener('mouseleave', startAutoSlide);
 document.getElementById('messageForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    // Ambil nilai dari form
+    // Ambil nilai dari form (kolom kiri)
     const name = document.getElementById('name').value;
     const dob = document.getElementById('dob').value;
     const gender = document.querySelector('input[name="gender"]:checked').value;
@@ -84,10 +84,10 @@ document.getElementById('messageForm').addEventListener('submit', function(event
     // Dapatkan waktu saat ini
     const currentTime = new Date().toString();
 
-    // Tampilkan data di sebelah kanan
-    document.getElementById('currentTime').textContent = currentTime;
-    document.getElementById('displayName').textContent = name;
-    document.getElementById('displayDob').textContent = dob;
-    document.getElementById('displayGender').textContent = gender;
-    document.getElementById('displayMessage').textContent = message;
+    // Tampilkan data di kolom kanan
+    document.getElementById('current-time').textContent = currentTime;
+    document.getElementById('preview-name').textContent = name;
+    document.getElementById('preview-dob').textContent = dob;
+    document.getElementById('preview-gender').textContent = gender;
+    document.getElementById('preview-message').textContent = message;
 });
