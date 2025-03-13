@@ -78,18 +78,8 @@ body {
     z-index: 1000;
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
     transition: background 0.4s ease, box-shadow 0.4s ease;
-}
-
-/* Untuk mobile */
-.menu-toggle {
-    display: none; 
-    font-size: 24px;
-    color: #fff;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    z-index: 1001;
+    box-sizing: border-box;
+    height: 80px; /* Tinggi tetap */
 }
 
 .main-header:hover {
@@ -104,13 +94,10 @@ body {
     background-position: center;
     background-size: cover;
     border-radius: 50%;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    display: block;
-    visibility: visible;
+    transition: box-shadow 0.4s ease;
 }
 
 .main-logo:hover {
-    transform: rotate(360deg) scale(1.15);
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
 }
 
@@ -127,96 +114,106 @@ nav {
     padding: 12px 30px;
     border-radius: 50px;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
-    transition: all 0.4s ease;
+    transition: background 0.4s ease, box-shadow 0.4s ease;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(10px);
-    white-space: nowrap; 
+    white-space: nowrap;
 }
 
 .nav-desain:hover {
     background: linear-gradient(90deg, #8b5fec, #b47cff);
-    transform: translateY(-4px) scale(1.1);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
 }
 
 .nav-desain:active {
-    transform: translateY(0) scale(0.98);
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Responsif untuk Mobile */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+/* Responsivitas untuk Mobile */
 @media (max-width: 600px) {
     .main-header {
-        padding: 15px 20px;
+        padding: 10px 70px;
+        height: auto;
+    }
+
+    .main-logo {
+        height: 40px;
+        width: 40px;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 20px;
     }
 
     nav {
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        background: linear-gradient(90deg, #7c4dff, #b47cff); 
-        padding: 10px 20px;
-        gap: 10px;
-        transform: translateY(-100%); 
-        transition: transform 0.3s ease;
+        background: linear-gradient(90deg, #7c4dff, #b47cff);
+        padding: 10px 15px;
+        gap: 8px;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease, opacity 0.3s ease;
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-        visibility: hidden; 
+        visibility: hidden;
         opacity: 0;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .main-header.active nav {
-        transform: translateY(0); 
+        transform: translateY(0);
         visibility: visible;
         opacity: 1;
     }
 
     .nav-desain {
-        font-size: 16px; 
-        padding: 10px 20px; 
-        width: 100%; 
-        text-align: center; 
-        box-sizing: border-box; 
+        margin: 5px 15px;
+        text-align: center;
     }
 
-    .main-logo {
-        height: 50px;
-        width: 50px;
+    .nav-desain:hover {
+        background: linear-gradient(90deg, #8b5fec, #b47cff);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     }
 
-    /* Toggle button untuk mobile */
-    .menu-toggle {
-        display: block;
-        font-size: 24px;
-        color: #fff;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 5px;
-        z-index: 1001;
-    }
-
-    /* Sembunyi toggle pada desktop */
-    @media (min-width: 601px) {
-        .menu-toggle {
-            display: none;
-        }
-
-        nav {
-            display: flex;
-            flex-direction: row;
-            position: static;
-            transform: none;
-            visibility: visible;
-            opacity: 1;
-            padding: 0;
-            box-shadow: none;
-        }
+    .nav-desain:active {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
     }
 }
 
+/* Pastikan desktop tetap normal */
+@media (min-width: 601px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        transform: none;
+        visibility: visible;
+        opacity: 1;
+        padding: 0;
+        box-shadow: none;
+    }
+}
 
 
 
