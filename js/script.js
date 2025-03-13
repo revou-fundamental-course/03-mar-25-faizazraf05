@@ -12,6 +12,17 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+// Toggle menu untuk mobile
+const header = document.querySelector('.main-header');
+const menuToggle = document.createElement('button');
+menuToggle.classList.add('menu-toggle');
+menuToggle.innerHTML = '☰';
+header.insertBefore(menuToggle, header.children[1]);
+
+menuToggle.addEventListener('click', () => {
+    header.classList.toggle('active');
+});
+
 
 // Auto Slide
 // Mendapatkan elemen slider
@@ -27,9 +38,9 @@ let currentSlide = 0;
 // Fungsi untuk menampilkan slide
 function showSlide(index) {
     if (index >= slide.length) {
-        currentSlide = 0; // Kembali ke slide pertama jika melebihi jumlah slide
+        currentSlide = 0; 
     } else if (index < 0) {
-        currentSlide = slide.length - 1; // Kembali ke slide terakhir jika negatif
+        currentSlide = slide.length - 1;
     } else {
         currentSlide = index;
     }
