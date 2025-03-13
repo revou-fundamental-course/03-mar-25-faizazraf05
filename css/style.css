@@ -1,4 +1,4 @@
-/* Reset dan pengaturan dasar */
+/* Pengaturan dasar */
 * {
     margin: 0;
     padding: 0;
@@ -198,7 +198,7 @@ nav {
         z-index: 1001;
     }
 
-    /* Sembunyitoggle pada desktop */
+    /* Sembunyi toggle pada desktop */
     @media (min-width: 601px) {
         .menu-toggle {
             display: none;
@@ -476,7 +476,6 @@ nav {
         width: 10px;
     }
 }
-
 
 
 

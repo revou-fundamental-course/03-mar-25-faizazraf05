@@ -2,7 +2,7 @@
 // Meminta pengguna untuk input nama sebelum masuk ke situs
 let userName = "";
 while (!userName) { // Looping hingga pengguna memasukkan nama
-    userName = prompt("Masukkan nama Anda untuk melanjutkan:").trim(); // Meminta input nama dan menghapus spasi ekstra
+    userName = prompt("Masukkan nama Anda untuk melanjutkan:").trim();
 }
 
 // Menunggu hingga dokumen semuanya dimuat
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// Toggle menu untuk mobile
+// Toggle untuk mobile
 const header = document.querySelector('.main-header');
 const menuToggle = document.createElement('button');
 menuToggle.classList.add('menu-toggle');
@@ -111,7 +111,7 @@ document.getElementById('messageForm').addEventListener('submit', function(event
     const gender = document.querySelector('input[name="gender"]:checked').value;
     const message = document.getElementById('message').value;
 
-    // Dapatkan waktu saat ini
+    // Dapatkan waktu terkini
     const currentTime = new Date().toString();
 
     // Tampilkan data di kolom kanan
