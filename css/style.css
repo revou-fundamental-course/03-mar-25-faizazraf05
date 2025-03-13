@@ -18,6 +18,82 @@ body {
 
 
 
+/* Responsif */
+@media (max-width: 600px) {
+    .main-header {
+        padding: 10px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main-logo {
+        height: 40px;
+        width: 40px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-desain {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    body {
+        padding-top: 60px;
+    }
+
+    .home-content {
+        padding: 30px 10px;
+        border-radius: 15px;
+    }
+
+    .home {
+        padding: 40px 10px;
+    }
+
+    #home h1 {
+        font-size: 2rem;
+    }
+
+    #home p {
+        font-size: 1rem;
+    }
+
+    .slider-container {
+        max-width: 90%;
+        height: 300px;
+    }
+
+    .slide {
+        height: 300px;
+    }
+
+    .nav-btn {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .dot {
+        height: 10px;
+        width: 10px;
+    }
+
+    .achievment {
+        padding: 40px 20px;
+        margin: 20px;
+    }
+
+    .achievment-btn {
+        font-size: 14px;
+        padding: 10px 20px
+    }
+}
+
+
 
 /* HEADER */
 .main-header {
@@ -427,7 +503,7 @@ body {
 .main-content {
     margin: 8px;
     padding: 40px;
-    background: linear-gradient(135deg, #f5f7fa, #e0e4e9); /* Latar belakang modern */
+    background: linear-gradient(135deg, #f5f7fa, #e0e4e9);
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     min-height: 100vh;
@@ -478,7 +554,7 @@ section {
     margin: 0 auto;
 }
 
-.about-school, .vision-mission {
+.about-me, .ukm {
     background: #fff;
     padding: 30px;
     border-radius: 15px;
@@ -487,12 +563,12 @@ section {
     margin-bottom: 40px;
 }
 
-.about-school:hover, .vision-mission:hover {
+.about-me:hover, .ukm:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-.about-school h2, .vision-mission h2 {
+.about-me h2, .ukm h2 {
     font-size: 2rem;
     color: #B19CD9;
     margin-bottom: 20px;
@@ -500,7 +576,7 @@ section {
     display: inline-block;
 }
 
-.about-school h2::after, .vision-mission h2::after {
+.about-me h2::after, .ukm h2::after {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -512,13 +588,13 @@ section {
     border-radius: 2px;
 }
 
-.about-school p, .vision-mission p {
+.about-me p, .ukm p {
     font-size: 1.1rem;
     color: #333;
     line-height: 1.6;
 }
 
-.mission-list {
+.ukm-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
@@ -526,105 +602,31 @@ section {
     margin-top: 20px;
 }
 
-.mission-item {
+.ukm-item {
     background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
     padding: 15px;
     border-radius: 10px;
     transition: background 0.3s ease;
 }
 
-.mission-item:hover {
+.ukm-item:hover {
     background: linear-gradient(135deg, #e0e0e0, #d0d0d0);
 }
 
-.sub-mission-list {
+.sub-ukm-list {
     display: flex;
     flex-wrap: nowrap;
     gap: 10px;
     margin-top: 10px;
 }
 
-.sub-mission-item {
+.sub-ukm-item {
     background: #f0f0f0;
     padding: 5px 10px;
     border-radius: 5px;
     display: inline-block;
     font-size: 0.95rem;
     color: #555;
-}
-
-@media (max-width: 600px) {
-    .main-header {
-        padding: 10px 20px;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .main-logo {
-        height: 40px;
-        width: 40px;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-
-    .nav-desain {
-        font-size: 14px;
-        padding: 8px 15px;
-    }
-
-    body {
-        padding-top: 60px;
-    }
-
-    .home-content {
-        padding: 30px 10px;
-        border-radius: 15px;
-    }
-
-    .home {
-        padding: 40px 10px;
-    }
-
-    #home h1 {
-        font-size: 2rem;
-    }
-
-    #home p {
-        font-size: 1rem;
-    }
-
-    .slider-container {
-        max-width: 90%;
-        height: 300px;
-    }
-
-    .slide {
-        height: 300px;
-    }
-
-    .nav-btn {
-        font-size: 16px;
-        padding: 12px;
-    }
-
-    .dot {
-        height: 10px;
-        width: 10px;
-    }
-
-    .achievment {
-        padding: 40px 20px;
-        margin: 20px;
-    }
-
-    .achievment-btn {
-        font-size: 14px;
-        padding: 10px 20px
-    }
 }
 
 
@@ -638,7 +640,7 @@ section {
     margin: 50px auto;
     max-width: 1600px;
     box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(12px); /* Efek glassmorphism */
+    backdrop-filter: blur(12px);
     position: relative;
     overflow: hidden;
 }
@@ -712,13 +714,13 @@ section {
 /* Kartu Achievement */
 .achievement-card {
     display: flex;
-    flex-direction: column; /* Mengatur tata letak menjadi kolom untuk mencegah tumpang tindih */
+    flex-direction: column; 
     align-items: center;
     background: rgba(255, 255, 255, 0.98);
     padding: 3rem;
     border-radius: 25px;
     box-shadow: 0 12px 50px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Mengatur teks ke tengah */
+    text-align: center;
     gap: 20px;
     transition: all 0.5s ease;
     overflow: hidden;
@@ -735,8 +737,8 @@ section {
 
 .achievement-card img {
     width: auto;
-    height: 200px; /* Mengurangi tinggi gambar agar proporsional */
-    object-fit: contain; /* Menggunakan contain agar gambar tidak terpotong */
+    height: 200px; 
+    object-fit: contain;
     border-radius: 15px;
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
     transition: transform 0.5s ease;

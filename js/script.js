@@ -1,16 +1,17 @@
-// ini file javascript
-
-// Meminta pengguna untuk memasukkan nama sebelum masuk ke situs
+// HOME KONTEN
+// Meminta pengguna untuk input nama sebelum masuk ke situs
 let userName = "";
 while (!userName) { // Looping hingga pengguna memasukkan nama
     userName = prompt("Masukkan nama Anda untuk melanjutkan:").trim(); // Meminta input nama dan menghapus spasi ekstra
 }
 
-// Menunggu hingga dokumen sepenuhnya dimuat
+// Menunggu hingga dokumen semuanya dimuat
 document.addEventListener("DOMContentLoaded", function() {
     // Menetapkan nama pengguna yang dimasukkan ke elemen dengan id 'username'
     document.getElementById("username").textContent = userName;
 });
+
+
 
 // Auto Slide
 // Mendapatkan elemen slider
@@ -59,6 +60,7 @@ dots.forEach((dot, index) => {
     });
 });
 
+
 // Fungsi autoslide
 let autoSlideInterval;
 
@@ -86,7 +88,9 @@ slides.addEventListener('mouseout', () => {
     startAutoSlide();
 });
 
-// Message Us
+
+
+// MESSAGE US
 document.getElementById('messageForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
