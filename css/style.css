@@ -79,7 +79,7 @@ body {
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
     transition: background 0.4s ease, box-shadow 0.4s ease;
     box-sizing: border-box;
-    height: 80px; /* Tinggi tetap */
+    height: 80px; 
 }
 
 .main-header:hover {
@@ -140,7 +140,7 @@ nav {
     z-index: 1001;
 }
 
-/* Responsivitas untuk Mobile */
+/* Responsif untuk Mobile */
 @media (max-width: 600px) {
     .main-header {
         padding: 10px 70px;
@@ -197,7 +197,7 @@ nav {
     }
 }
 
-/* Pastikan desktop tetap normal */
+/* untuk memastikan desktop tetap normal */
 @media (min-width: 601px) {
     .menu-toggle {
         display: none;

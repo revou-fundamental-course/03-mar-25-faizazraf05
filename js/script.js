@@ -60,7 +60,7 @@ prevBtn.addEventListener('click', () => {
 // Event listener untuk tombol berikutnya
 nextBtn.addEventListener('click', () => {
     showSlide(currentSlide + 1);
-    resetAutoSlide(); // Reset timer saat tombol diklik
+    resetAutoSlide(); 
 });
 
 // Event listener untuk dots
@@ -83,8 +83,8 @@ function startAutoSlide() {
 
 // Fungsi untuk mereset autoslide
 function resetAutoSlide() {
-    clearInterval(autoSlideInterval); // Hentikan interval saat ini
-    startAutoSlide(); // Mulai ulang autoslide
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
 }
 
 // Mulai autoslide saat halaman dimuat
