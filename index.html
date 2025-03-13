@@ -19,12 +19,12 @@
     <!-- Main header -->
     <header class="main-header">
         <!-- Logo -->
-        <div class="main-logo"></div>
+        <div class="main-logo" style="height: 60px; width: 60px; background-image: url('assets/logo.jpg'); background-position: center; background-size: cover; border-radius: 50%;"></div>
 
         <!-- Navigasi -->
         <nav>
             <a href="#home" class="nav-desain">Home</a>
-            <a href="#our-profile" class="nav-desain">Our Profile</a>
+            <a href="#profile" class="nav-desain">Our Profile</a>
             <a href="#achievment" class="nav-desain">Achievment</a>
             <a href="#message-us" class="nav-desain">Mesage Us</a>
             <a href="assets\Resume Faiz Azraf.pdf" target="_blank" class="nav-desain">Resume</a> <!-- untuk membuka tab baru dengan menampilkan resume -->  
@@ -39,17 +39,20 @@
          <div class="home-content">
             <section id="home" style="margin-bottom: 80px; margin-top: 30px;">
                 <div class="home">
-                    <header>
-                        <h1>Hi <span id="username">Nama</span>! Welcome to my portofolio website</h1>
+                    <ul>
+                      <header>
+                        <h1>Hi <span id="username">Nama</span>! Welcome to My Portofolio Website</h1>
                         <p>Here, you can view my profile, achievements, and messages us to me</p>
-                    </header>
+                      </header>  
+                    </ul>
+                    
                     
                     <!-- Banner autoslide -->
                     <div class="slider-container">
                         <div class="slides">
-                            <img src="assets\Logo KRI 2024.png" class="slide" alt="Slide 1">
-                            <img src="assets\LogoTC.webp" class="slide" alt="Slide 2">
-                            <img src="https://via.placeholder.com/800x400?text=Slide+3" class="slide" alt="Slide 3">
+                            <img src="assets\banner1.jpg" class="slide" alt="Slide 1">
+                            <img src="assets\banner2.jpg" class="slide" alt="Slide 2">
+                            <img src="assets\banner 3.jpg" class="slide" alt="Slide 3">
                         </div>
                         
                         <div class="nav-buttons">
@@ -77,49 +80,38 @@
         
 
         <!-- Our Profile konten -->
-         <div class="our-profile">
-            <section id="our-profile">
-            <header style="margin-bottom: 45px;">
-                <h1>Our Profile</h1>
-            </header> 
-
-            
-
-            <!-- Konten Our Profile -->
-             <div class="our-profile-content" style="margin-bottom: 80px;" >
-                <div class="grid-3">
-
-                    <!-- Our profile content sub pertama -->
-                    <div class="sub">
-                        <div class="sub-icon">
-                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M12.5 17.52c1.415-1.054 3.624-1.846 5.5-2v6.479c-1.739.263-3.755 1.104-5.5 2v-6.479zm-1 0c-1.415-1.054-3.624-1.846-5.5-2v6.479c1.739.263 3.755 1.104 5.5 2v-6.479zm-6.5 2.917c-2.049-.674-2.996-1.437-2.996-1.437l-.004-2.025c-.008-2.127.088-3.344 2.648-3.909 2.805-.619 5.799-1.317 4.241-3.521-3.901-5.523-.809-9.545 3.111-9.545 3.921 0 6.996 3.991 3.11 9.545-1.529 2.185 1.376 2.888 4.242 3.521 2.57.568 2.657 1.791 2.647 3.934l-.003 2s-.947.763-2.996 1.437v-6.003l-1.082.089c-2.054.169-4.36 1.002-5.918 2.128-1.559-1.126-3.863-1.959-5.918-2.128l-1.082-.089v6.003z"/></svg> 
+        <main class="our-profile">
+            <section id="profile">
+                <h2>Selamat Datang di Profil Kami</h2>
+                <p>Kenali lebih dekat sekolah kami melalui informasi berikut.</p>
+            </section>
+            <section class="about-school">
+                <h2>Tentang Sekolah Kami</h2>
+                <p>Sekolah kami didirikan pada tahun 2000 dan telah menjadi pusat pendidikan unggulan di daerah ini. Kami fokus pada pengembangan akademik dan karakter siswa.</p>
+            </section>
+            <section class="vision-mission">
+                <h2>Visi & Misi</h2>
+                <p><strong>Visi:</strong> Menjadi sekolah terbaik dengan standar internasional pada tahun 2030.</p>
+                <p><strong>Misi:</strong></p>
+                <div class="mission-list">
+                    <div class="mission-item">Memberikan pendidikan berkualitas.</div>
+                    <div class="mission-item">
+                        Membangun karakter siswa melalui:
+                        <div class="sub-mission-list">
+                            <span class="sub-mission-item">Pelatihan kepemimpinan.</span>
+                            <span class="sub-mission-item">Kegiatan ekstrakurikuler.</span>
                         </div>
-                        <h4>Academy</h4>
-                        <p>Saya Faiz Azraf merupakan mahasiswa prodi Informatika angkatan 2023. Saya seorang berpengalaman dalam bidang mekanis dan pemrograman.</p>
                     </div>
-                    
-                    <!-- Our profile content sub kedua -->
-                    <div class="sub">
-                        <div class="sub-icon">
-                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M13 24h-2c-.288 0-.563-.125-.753-.341l-.576-.659h4.658l-.576.659c-.19.216-.465.341-.753.341zm1.867-3c.287 0 .52.224.52.5s-.233.5-.52.5h-5.734c-.287 0-.52-.224-.52-.5s.233-.5.52-.5h5.734zm-2.871-17c2.983 0 6.004 1.97 6.004 5.734 0 1.937-.97 3.622-1.907 5.252-.907 1.574-1.843 3.201-1.844 5.014h1.001c0-3.286 3.75-6.103 3.75-10.266 0-4.34-3.502-6.734-7.004-6.734-3.498 0-6.996 2.391-6.996 6.734 0 4.163 3.75 6.98 3.75 10.266h.999c.001-1.813-.936-3.44-1.841-5.014-.938-1.63-1.908-3.315-1.908-5.252 0-3.764 3.017-5.734 5.996-5.734zm9.428 7.958c.251.114.362.411.248.662-.114.251-.41.363-.662.249l-.91-.414c-.252-.114-.363-.41-.249-.662.114-.251.411-.362.662-.248l.911.413zm-18.848 0c-.251.114-.362.411-.248.662.114.251.41.363.662.249l.91-.414c.252-.114.363-.41.249-.662-.114-.251-.411-.362-.662-.248l-.911.413zm18.924-2.958h-1c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h1c.276 0 .5.224.5.5s-.224.5-.5.5zm-18-1c.276 0 .5.224.5.5s-.224.5-.5.5h-1c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h1zm16.818-3.089c.227-.158.284-.469.126-.696-.157-.227-.469-.283-.696-.126l-.821.57c-.227.158-.283.469-.126.696.157.227.469.283.696.126l.821-.57zm-16.636 0c-.227-.158-.284-.469-.126-.696.157-.227.469-.283.696-.126l.821.57c.227.158.283.469.126.696-.157.227-.469.283-.696.126l-.821-.57zm13.333-3.033c.134-.241.048-.546-.193-.68-.241-.135-.546-.048-.68.192l-.488.873c-.135.241-.048.546.192.681.241.134.546.048.681-.193l.488-.873zm-10.03 0c-.134-.241-.048-.546.193-.68.241-.135.546-.048.68.192l.488.873c.135.241.048.546-.192.681-.241.134-.546.048-.681-.193l-.488-.873zm5.515-1.378c0-.276-.224-.5-.5-.5s-.5.224-.5.5v1c0 .276.224.5.5.5s.5-.224.5-.5v-1z"/></svg>
+                    <div class="mission-item">
+                        Mendorong inovasi dengan:
+                        <div class="sub-mission-list">
+                            <span class="sub-mission-item">Proyek penelitian siswa.</span>
+                            <span class="sub-mission-item">Kolaborasi dengan teknologi terbaru.</span>
                         </div>
-                        <h4>Skill</h4>
-                        <p>Mampu bekerja dengan baik dalam tim maupun secara individu serta antusias dalam meningkatkan pengetahuan, keterampilan, dan pengalaman.</p>
                     </div>
-
-                    <!-- Our profile content sub ketiga -->
-                    <div class="sub">
-                        <div class="sub-icon">
-                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M15.517 24h-11.646c.522-3.035.897-6.162-.422-8.028-1.666-2.357-2.43-4.742-2.449-6.883-.045-5.19 4.231-9.114 10.203-9.089 7.236.03 9.328 6.156 9.773 7.943.34 1.369-.898 1.869-.166 2.702.596.679 1.035 1.364 1.789 2.177.292.315.405.646.401.943-.006.434-.291.798-.748.958-.429.15-.76.32-1.215.443-.145 1.16-.521 2.572-.798 3.557-.737 2.62-2.896 1.059-3.881 2.607-.426.668-.64 1.738-.841 2.67zm-3.844-19h-1.346c-.243.681-.312 1.122-.842 1.341-.53.22-.888-.041-1.545-.353l-.952.952c.311.654.573 1.015.353 1.545-.219.53-.66.599-1.341.841v1.347c.68.242 1.122.312 1.341.842.222.534-.047.902-.353 1.544l.952.952c.652-.309 1.015-.573 1.545-.353v.001c.529.219.599.657.842 1.341h1.346c.243-.682.313-1.121.845-1.343h.001c.526-.219.883.042 1.541.354l.952-.952c-.31-.651-.573-1.014-.354-1.544.219-.529.662-.6 1.342-.842v-1.347c-.688-.244-1.123-.313-1.341-.841-.22-.53.041-.89.353-1.545l-.952-.952c-.651.31-1.014.573-1.545.353-.529-.219-.598-.657-.842-1.341zm-.673 6.667c-.92 0-1.667-.747-1.667-1.667 0-.921.747-1.667 1.667-1.667s1.667.746 1.667 1.667c0 .92-.747 1.667-1.667 1.667z"/></svg>
-                        </div>
-                        <h4>Faiz Azraf</h4>
-                        <p>Saya Faiz Azraf merupakan mahasiswa prodi Informatika angkatan 2023.</p>
-                    </div>
-
                 </div>
-             </div>
-         </section>
-         </div>
+            </section>
+        </main>
          
 
 

@@ -13,63 +13,78 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Auto Slide
-let currentSlide = 0;
+// Mendapatkan elemen slider
 const slides = document.querySelector('.slides');
-const totalSlides = document.querySelectorAll('.slide').length;
+const slide = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
 const dots = document.querySelectorAll('.dot');
-let autoSlide;
 
+// Inisialisasi indeks slide
+let currentSlide = 0;
+
+// Fungsi untuk menampilkan slide
 function showSlide(index) {
-    if (index >= totalSlides) currentSlide = 0;
-    else if (index < 0) currentSlide = totalSlides - 1;
-    else currentSlide = index;
-    
+    if (index >= slide.length) {
+        currentSlide = 0; // Kembali ke slide pertama jika melebihi jumlah slide
+    } else if (index < 0) {
+        currentSlide = slide.length - 1; // Kembali ke slide terakhir jika negatif
+    } else {
+        currentSlide = index;
+    }
     slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-    updateDots();
-}
 
-function updateDots() {
+    // Update active dot
     dots.forEach(dot => dot.classList.remove('active'));
     dots[currentSlide].classList.add('active');
 }
 
-// Next/Previous controls
-document.querySelector('.next').addEventListener('click', () => {
-    clearInterval(autoSlide);
-    showSlide(currentSlide + 1);
-    startAutoSlide();
-});
-
-document.querySelector('.prev').addEventListener('click', () => {
-    clearInterval(autoSlide);
+// Event listener untuk tombol sebelumnya
+prevBtn.addEventListener('click', () => {
     showSlide(currentSlide - 1);
-    startAutoSlide();
+    resetAutoSlide(); // Reset timer saat tombol diklik
 });
 
-// Dot navigation
-dots.forEach(dot => {
+// Event listener untuk tombol berikutnya
+nextBtn.addEventListener('click', () => {
+    showSlide(currentSlide + 1);
+    resetAutoSlide(); // Reset timer saat tombol diklik
+});
+
+// Event listener untuk dots
+dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
-        clearInterval(autoSlide);
-        showSlide(parseInt(dot.getAttribute('data-slide')));
-        startAutoSlide();
+        showSlide(index);
+        resetAutoSlide(); // Reset timer saat dot diklik
     });
 });
 
-// Auto slide
+// Fungsi autoslide
+let autoSlideInterval;
+
 function startAutoSlide() {
-    autoSlide = setInterval(() => {
-        showSlide(currentSlide + 1);
-    }, 4000); // 4 detik
+    autoSlideInterval = setInterval(() => {
+        showSlide(currentSlide + 1); // Pindah ke slide berikutnya
+    }, 3000); // Durasi 5 detik per slide
 }
 
-// Start slider
-showSlide(0);
+// Fungsi untuk mereset autoslide
+function resetAutoSlide() {
+    clearInterval(autoSlideInterval); // Hentikan interval saat ini
+    startAutoSlide(); // Mulai ulang autoslide
+}
+
+// Mulai autoslide saat halaman dimuat
 startAutoSlide();
 
-// Pause on hover
-const sliderContainer = document.querySelector('.slider-container');
-sliderContainer.addEventListener('mouseenter', () => clearInterval(autoSlide));
-sliderContainer.addEventListener('mouseleave', startAutoSlide);
+// Hentikan autoslide saat mouse hover dan mulai lagi saat mouse out
+slides.addEventListener('mouseover', () => {
+    clearInterval(autoSlideInterval);
+});
+
+slides.addEventListener('mouseout', () => {
+    startAutoSlide();
+});
 
 // Message Us
 document.getElementById('messageForm').addEventListener('submit', function(event) {
